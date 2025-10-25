@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Dev Consulting Business</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #2c3e50; /* Darker background for more pop */
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #ecf0f1; /* Light color for the heading */
+        }
+        .section {
+            opacity: 0; /* Start with sections hidden */
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 2s ease-in-out; /* Only control opacity initially */
+            color: #bdc3c7; /* Soft gray text */
+            font-size: 24px;
+            text-align: center;
+        }
+        .visible {
+            opacity: 1; /* Make section fully visible when in view */
+            animation: popIn 1s forwards; /* Animation for the whole section */
+        }
+        @keyframes popIn {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        .pricing-tier {
+            width: 300px;
+            height: 250px;
+            margin: 10px;
+            padding: 20px;
+            background-color: #ecf0f1; /* Light background for contrast */
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3); /* Stronger shadow for depth */
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            transform: rotateY(90deg);
+            transition: transform 1s ease-out, opacity 1s ease-in-out;
+        }
+        .visible .pricing-tier {
+            display: flex;
+            animation: flipIn 1.2s ease-out forwards;
+        }
+        @keyframes flipIn {
+            from { transform: rotateY(90deg); opacity: 0; }
+            to { transform: rotateY(0); opacity: 1; }
+        }
+        .tier-content {
+            flex-grow: 1;
+            text-align: center;
+        }
+        .button-link {
+            padding: 10px 20px;
+            color: #2c3e50; /* Matching the background */
+            background-color: #f39c12; /* Vibrant button color */
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        
+         .about-us {
+            flex-direction: row; /* Horizontal layout for about us */
+            padding: 50px;
+        }
+        .about-image {
+            flex: 1;
+            background: url('path_to_your_image.jpg') no-repeat center center; /* Place your image URL here */
+            background-size: cover;
+        }
+        .about-text {
+            flex: 2;
+            padding: 20px;
+            font-size: 18px;
+            color: #ecf0f1;
+        }
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Our Services</h1>
+        <div class="about-us">
+        <div class="about-image"></div>
+        <div class="about-text">
+            <h2>About Us</h2>
+            <p>Welcome to our company. We are a team dedicated to providing top-notch web development and consulting services tailored to meet your business needs. Our approach is client-focused, ensuring that your digital presence is not only functional but also dynamic and engaging. We believe in building solutions that drive results and enhance your business processes. Let us help you navigate the complexities of the digital world.</p>
+        </div>
+    </div>
+    <div id="section1" class="section">
+        <p>Innovative Web Development</p>
+        <div class="pricing-container">
+            <div class="pricing-tier">
+                <div class="tier-content">
+                    <p>Basic Package: Ideal for new businesses looking to establish an online presence.</p>
+                    <p>Price: $99</p>
+                </div>
+       <a href="/basic-web-dev" class="button-link">Learn More</a>
+        
+            </div>
+            <div class="pricing-tier">
+                <div class="tier-content">
+                    <p>Intermediate Package: Perfect for growing businesses that need more features.</p>
+                    <p>Price: $199</p>
+                </div>
+                <a href="#" class="button-link">Learn More</a>
+            </div>
+            <div class="pricing-tier">
+                <div class="tier-content">
+                    <p>Advanced Package: Comprehensive solutions for established businesses.</p>
+                    <p>Price: $299</p>
+                </div>
+                <a href="#" class="button-link">Learn More</a>
+            </div>
+        </div>
+    </div>
+    <div id="section2" class="section">
+        <p>Data Driven Consulting</p>
+        <div class="pricing-container">
+            <div class="pricing-tier">
+                <div class="tier-content">
+                    <p>Basic Analytics: Get actionable insights with basic data analysis.</p>
+                    <p>Price: $150</p>
+                </div>
+                <a href="#" class="button-link">Learn More</a>
+            </div>
+            <div class="pricing-tier">
+                <div class="tier-content">
+                    <p>Enhanced Insights: Advanced analytics for deeper understanding and decision making.</p>
+                    <p>Price: $250</p>
+                </div>
+                <a href="#" class="button-link">Learn More</a>
+            </div>
+            <div class="pricing-tier">
+                <div class="tier-content">
+                    <p>Full Consultation: Full-scale consulting to overhaul your data strategy.</p>
+                    <p>Price: $350</p>
+                </div>
+                <a href="#" class="button-link">Learn More</a>
+            </div>
+        </div>
+    </div>
+    <div id="section3" class="section">
+        <p>Cutting-edge Tech Solutions</p>
+        <div class="pricing-container">
+            <div class="pricing-tier">
+                <div class="tier-content">
+                    <p>Tech Starter: Entry-level tech solutions for startups and small enterprises.</p>
+                    <p>Price: $200</p>
+                </div>
+                <a href="#" class="button-link">Learn More</a>
+            </div>
+            <div class="pricing-tier">
+                <div class="tier-content">
+                    <p>Tech Pro: Mid-level technology suite for growing businesses.</p>
+                    <p>Price: $400</p>
+                </div>
+                <a href="#" class="button-link">Learn More</a>
+            </div>
+            <div class="pricing-tier">
+                <div class="tier-content">
+                    <p>Tech Elite: Advanced technology solutions for large organizations.</p>
+                    <p>Price: $600</p>
+                </div>
+                <a href="#" class="button-link">Learn More</a>
+            </div>
+        </div>
+    </div>
+    <div class="about-us">
+        <div class="about-image"></div>
+        <div class="about-text">
+            <h2>About Us</h2>
+            <p>Welcome to our company. We are a team dedicated to providing top-notch web development and consulting services tailored to meet your business needs. Our approach is client-focused, ensuring that your digital presence is not only functional but also dynamic and engaging. We believe in building solutions that drive results and enhance your business processes. Let us help you navigate the complexities of the digital world.</p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    } else {
+                        entry.target.classList.remove('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1 // Adjust this to require less of the element in view to trigger the effect
+            });
+
+            document.querySelectorAll('.section').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
